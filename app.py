@@ -2,10 +2,11 @@ from flask import Flask, request, session
 from twilio.twiml.messaging_response import MessagingResponse
 from twilio_test import ask, append_interaction_to_chat_log
 app = Flask(__name__)
+import os
 
 
 # if for some reason your conversation with TruYou gets weird, change the secret key
-app.config["SECRET_KEY"] = "TruYou-2022-Testing-Bot"
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 @app.route("/twilio_test", methods=["POST"])
 
 def jabe():
