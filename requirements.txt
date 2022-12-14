@@ -34,7 +34,6 @@ MarkupSafe==2.0.1
 msgpack==1.0.3
 mypy==0.910
 mypy-extensions==0.4.3
-numpy==1.22.3
 openai==0.25.0
 openpyxl==3.0.10
 packaging==21.3
