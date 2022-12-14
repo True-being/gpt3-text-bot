@@ -8,16 +8,16 @@ from twilio.rest import Client
 
 
 # Set up OpenAI API key
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Set up Twilio API credentials
-twilio_account_sid = "AC44333eb4084ade1d519a84ab598873eb"
-twilio_auth_token = "f44b320f17935879d3f1a77772ee2523"
+twilio_account_sid = os.getenv("TWILIO_ACCOUNT_SID")
+twilio_auth_token = os.getenv("TWILIO_AUTH_TOKEN")
 twilio_client = Client(twilio_account_sid, twilio_auth_token)
 
 # Set up phone number variables
-my_number = "+16233136290"
-gpt3_number = "+16672443906"
+my_number = os.getenv("MY_NUMBER")
+gpt3_number = os.getenv("GPT3_NUMBER")
 
 start_sequence = "\nTruYou: "
 restart_sequence = "\n\nPerson: "
